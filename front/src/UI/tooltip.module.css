@@ -1,0 +1,37 @@
+.showTooltip{
+    position: absolute;
+    z-index: 100;
+    background-color: hsla(0, 0%, 0%, 0.69);
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: white;
+    width: 134px;
+    transform: translate(75px, 125px);
+    line-height: 15.6px;
+    transition: 0.5s;
+    opacity: 100%;
+}
+.hideTooltip{
+    position: absolute;
+    z-index: 1;
+    background-color: hsla(0, 0%, 0%, 0.69);
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    transform: translate(60px, 110px);
+    color: white;
+    width: 134px;
+    line-height: 15.6px;
+    transition: 0.5s;
+    opacity: 0%;
+    z-index: -1;
+}
+.showTooltip p, .hideTooltip p {
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}

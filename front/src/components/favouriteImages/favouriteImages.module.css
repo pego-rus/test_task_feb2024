@@ -1,0 +1,22 @@
+.favouriteImagesContainer{
+    padding-top: 3rem;
+    display: grid;
+    padding-left: 105px;
+    margin-right: 105px;
+    width: 591px;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 42px;
+    margin-bottom: 3rem;
+}
+span{
+    display: block;
+    padding-top: 12px;
+    color: #787878;
+    width: 150px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}

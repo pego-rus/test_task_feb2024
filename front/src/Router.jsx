@@ -1,13 +1,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import List from './components/List/List'
-import Favourites from './components/Favourites/Favourites'
+import Catalog from './components/Catalog'
+import Favourites from './components/Favourites'
+
 
 const Router = () => {
     return(
         <BrowserRouter>
             <Routes>
-                <Route path='/list' element={<List />} />
-                <Route path='/favourites' element={<Favourites />} />
+                    <Route path='/' element={<Catalog />} />
+                    <Route path='/favourites' element={<Favourites />} />
             </Routes>
         </BrowserRouter>
     )

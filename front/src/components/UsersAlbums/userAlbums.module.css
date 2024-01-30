@@ -1,0 +1,17 @@
+.albumTitle{
+    padding-left: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.albumTitle img{
+    margin-right: 24px;
+}
+.albumTitle p{
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 23.4px;
+}
