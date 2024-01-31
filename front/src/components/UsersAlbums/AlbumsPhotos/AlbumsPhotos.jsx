@@ -12,7 +12,7 @@ const AlbumsPhotos = ({ albumId }) => {
             setUserPhotos(await axios.get(`http://localhost:3000/photos/${albumId}`))
         };
         getUserPhotos();
-    });
+    },[]);
 
     return (
         <div className={styles.imgesContainer}>
