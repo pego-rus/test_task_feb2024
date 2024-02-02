@@ -53,7 +53,7 @@ const List = () => {
                         {el.active && <UsersAlbums userId={el.id}/>}
                     </>
                     ) 
-                    : <Loading />}
+                    : <Loading  marginTop={'150px'}/>}
             </div>
         </>
     )

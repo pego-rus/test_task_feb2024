@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import AlbumsPhotos from "./AlbumsPhotos/AlbumsPhotos"
+import Loading from "../../UI/Loading"
 import axios from "axios"
 import styles from './userAlbums.module.css'
 
@@ -9,8 +10,14 @@ const UsersAlbums = ({ userId }) => {
 
     useEffect(() => {
         const getUserData = async () => {
-            const albums = await axios.get(`http://localhost:3000/albums/${userId}`);
-            setUserData(albums.data.map((album) => {
+            let albums;
+            try {
+                albums = await axios.get(`http://localhost:3000/albums/${userId}`);
+            } catch (error) {
+                console.log(error)
+            }
+
+            setUserData(albums?.data?.map((album) => {
                 return {
                     ...album,
                     'activeAlbum': false
@@ -32,7 +39,7 @@ const UsersAlbums = ({ userId }) => {
 
     return (
         <>
-            {userData && userData.map(album => 
+            {userData ? userData.map(album => 
                 <>
                     <div key={album.id} className={styles.albumTitle}>
                         {!album.active ? <img id={album.albumId} src="Open.png" height={'32px'} onClick={changeAttachementVisibility} /> 
@@ -40,7 +47,8 @@ const UsersAlbums = ({ userId }) => {
                         <div>{album.title}</div>
                     </div>
                     {album.active && <AlbumsPhotos albumId={album.albumId}/>}
-                </>)}
+                </>)
+                : <Loading marginTop={'10px'} />}
         </>
     )
 }

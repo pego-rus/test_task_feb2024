@@ -1,9 +1,9 @@
 import styles from './loading.module.css'
 
-const Loading = () => {
+const Loading = ({ marginTop }) => {
     return(
         <>
-            <p>Loading...</p>
+            <div className={styles.animatedLoading} style={{marginTop: marginTop}}></div>
         </>
     )
 }
